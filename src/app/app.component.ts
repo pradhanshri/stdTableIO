@@ -11,7 +11,6 @@ export class AppComponent {
   lnamevalu !:string;
   emailvalu !:string;
   contactvalu !:string;
-  
   stdTableIO : Array<Istud> = [
     {
       fname: "Jhon",
@@ -20,18 +19,10 @@ export class AppComponent {
       contact: 8956362891,
     }
   ]
-  onBtnClick(eve : Event){
-    let obj : Istud = {
-      fname:this.fnamevalu,
-      lanme:this.lnamevalu,
-      email: this.emailvalu,
-      contact: +this.contactvalu,
-    }
-    console.log(obj);
-    this.stdTableIO.push(obj);
-    this.fnamevalu='';
-    this.lnamevalu='';
-    this.emailvalu='';
-    this.contactvalu='';
+  onStdUpdate(data:Istud){
+
+    this.stdTableIO.push(data);
+
   }
+  
 }
